@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+	<head>
+	</head>
+	<body>
+<style>
+.menu{
+background:red;
+display:inline-block;
+width:50px;
+margin: 0px;
+}
+
+.info{
+display:none;
+background:blue;
+position: absolute;
+width:152px;
+}
+</style>
+<div class="menu">menu 1</div>
+<div class="menu">menu 2</div>
+<div class="menu">menu 3</div>
+		<div class="info">asdf<br>DI ANIMO DI ANIMO INSTIN</div>
+		<div class="info">mucha informacion pava</div>
+		<div class="info">no se q mas escribir</div>
+<p>Las páginas que aparezcan en las pestañas de incógnito no se guardarán en el historial del navegador, en el almacén de cookies ni en el historial de búsquedas una vez que hayas cerrado todas tus pestañas de incógnito. Se mantendrán los archivos que descargues o los marcadores que crees. Más información sobre la navegación en modo incógnito</p>
+<script>
+document.getElementsByClassName("menu")[0].onclick = function(){
+	document.getElementsByClassName("info")[0].style.display = "block";
+}
+document.getElementsByClassName("menu")[0].onmouseleave = function(){
+	document.getElementsByClassName("info")[0].style.display = "none";
+}
+document.getElementsByClassName("menu")[1].onmouseover = function(){
+	document.getElementsByClassName("info")[1].style.display = "block";
+}
+document.getElementsByClassName("menu")[1].onmouseleave = function(){
+	document.getElementsByClassName("info")[1].style.display = "none";
+}
+document.getElementsByClassName("menu")[2].onmouseover = function(){
+	document.getElementsByClassName("info")[2].style.display = "block";
+}
+document.getElementsByClassName("menu")[2].onmouseleave = function(){
+	document.getElementsByClassName("info")[2].style.display = "none";
+}
+</script>	
+</body>
+</html>
