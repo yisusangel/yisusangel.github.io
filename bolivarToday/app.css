@@ -2,3 +2,5 @@
   margin: 50px auto;
   max-width: 1000px;
 }
+
+[v-cloak] { display: none; }

@@ -215,5 +215,5 @@ var app = new Vue({
       }catch(err){}
       return value;
     },
-  }
+  },
 });
