@@ -16,17 +16,17 @@ var app = new Vue({
   created: function(){
     var that = this;
     var tasa = {
-      nombre: "Dolar",
+      nombre: "Dólar",
       pais: "EEUU",
       valor: 1
     }
     that.tasas.push(tasa);
     that.tasa1 = tasa;
     that.tasavs = tasa;
-    axios.get("https://s3.amazonaws.com/dolartoday/data.json")
+    axios.get("https://s3.amazonaws.com/Dólartoday/data.json")
     .then(function (response) {
       var tasa = {
-        nombre: "Bolivar",
+        nombre: "Bolívar",
         pais: "Venezuela",
         valor: response.data.USD.transferencia
       }
@@ -51,7 +51,7 @@ var app = new Vue({
             deseada = true;
             break;
           case "USDAWG":
-            tasa.nombre = "Florin";
+            tasa.nombre = "Florín";
             tasa.pais = "Aruba";
             tasa.valor = val;
             deseada = true;
@@ -75,8 +75,8 @@ var app = new Vue({
             deseada = true;
             break;
           case "USDCAD":
-            tasa.nombre = "Dolar";
-            tasa.pais = "Canada";
+            tasa.nombre = "Dólar";
+            tasa.pais = "Canadá";
             tasa.valor = val;
             deseada = true;
             break;
@@ -93,14 +93,14 @@ var app = new Vue({
             deseada = true;
             break;
           case "USDCRC":
-            tasa.nombre = "Colon";
+            tasa.nombre = "Colón";
             tasa.pais = "Costa Rica";
             tasa.valor = val;
             deseada = true;
             break;
           case "USDDOP":
             tasa.nombre = "Peso";
-            tasa.pais = "Republica Dominicana";
+            tasa.pais = "República Dominicana";
             tasa.valor = val;
             deseada = true;
             break;
@@ -117,37 +117,37 @@ var app = new Vue({
             deseada = true;
             break;
           case "USDJMD":
-            tasa.nombre = "Dolar";
+            tasa.nombre = "Dólar";
             tasa.pais = "Jamaica";
             tasa.valor = val;
             deseada = true;
             break;
           case "USDMXN":
             tasa.nombre = "Peso";
-            tasa.pais = "Mexico";
+            tasa.pais = "México";
             tasa.valor = val;
             deseada = true;
             break;
           case "USDNIO":
-            tasa.nombre = "Cordoba";
+            tasa.nombre = "Córdoba";
             tasa.pais = "Nicaragua";
             tasa.valor = val;
             deseada = true;
             break;
           case "USDPAB":
             tasa.nombre = "Balboa";
-            tasa.pais = "Panama";
+            tasa.pais = "Panamá";
             tasa.valor = val;
             deseada = true;
             break;
           case "USDPEN":
             tasa.nombre = "Nuevo Sol";
-            tasa.pais = "Peru";
+            tasa.pais = "Perú";
             tasa.valor = val;
             deseada = true;
             break;
           case "USDPYG":
-            tasa.nombre = "Guarani";
+            tasa.nombre = "Guaraní";
             tasa.pais = "Paraguay";
             tasa.valor = val;
             deseada = true;
