@@ -7,7 +7,11 @@ var app = new Vue({
     tasavs: [],
     valor1: 1,
     valor2: 1,
-    valorvs: 1
+    valorvs: 1,
+    normal: true,
+    unovs: false,
+    normalClass:"is-active",
+    unovsClass:""
   },
   created: function(){
     var that = this;
@@ -183,6 +187,22 @@ var app = new Vue({
       var auxvalor = this.valor1;
       this.valor1 = this.valor2;
       this.valor2 = auxvalor;
+    },
+    cambiarConv:function(tab){
+      switch(tab){
+        case 0:
+          this.unovs = false;
+          this.normal = true;
+          this.unovsClass = "";
+          this.normalClass = "is-active";
+          break;
+        case 1:
+          this.normal = false;
+          this.unovs = true;
+          this.normalClass = "";
+          this.unovsClass = "is-active";
+          break;
+      }
     }
   },
   filters: {
@@ -195,5 +215,5 @@ var app = new Vue({
       }catch(err){}
       return value;
     },
-  }
+  },
 });
