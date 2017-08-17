@@ -23,7 +23,7 @@ var app = new Vue({
     that.tasas.push(tasa);
     that.tasa1 = tasa;
     that.tasavs = tasa;
-    axios.get("https://s3.amazonaws.com/Dólartoday/data.json")
+    axios.get("https://s3.amazonaws.com/dolartoday/data.json")
     .then(function (response) {
       var tasa = {
         nombre: "Bolívar",
@@ -215,5 +215,5 @@ var app = new Vue({
       }catch(err){}
       return value;
     },
-  },
+  }
 });
