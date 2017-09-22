@@ -3,6 +3,7 @@
   <head>
     <title>Bolívar Today</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
     <link rel="stylesheet" href="app.css">
   </head>
@@ -12,14 +13,14 @@
       <h1 class="title is-1">Bolívar Today <img style="height:70px" src="https://www.emojibase.com/resources/img/emojis/hangouts/1f1fb-1f1ea.png"/></h1>
       <div class="tabs is-boxed">
         <ul>
-          <li :class="normalClass">
+          <li :class="unovsClass">
             <a @click="cambiarConv(0)">
-              <span>Convertidor</span>
+              <span>Comparador</span>
             </a>
           </li>
-          <li :class="unovsClass">
+          <li :class="normalClass">
             <a @click="cambiarConv(1)">
-              <span>Comparador</span>
+              <span>Convertidor</span>
             </a>
           </li>
         </ul>

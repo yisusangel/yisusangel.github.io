@@ -8,11 +8,12 @@ var app = new Vue({
     valor1: 1,
     valor2: 1,
     valorvs: 1,
-    normal: true,
-    unovs: false,
-    normalClass:"is-active",
-    unovsClass:""
+    normal: false,
+    unovs: true,
+    normalClass:"",
+    unovsClass:"is-active"
   },
+
   created: function(){
     var that = this;
     var tasa = {
@@ -165,6 +166,7 @@ var app = new Vue({
       }
     })
   },
+
   methods: {
     cambiarTasa:function(){
       this.valor1 = 1;
@@ -191,20 +193,22 @@ var app = new Vue({
     cambiarConv:function(tab){
       switch(tab){
         case 0:
-          this.unovs = false;
-          this.normal = true;
-          this.unovsClass = "";
-          this.normalClass = "is-active";
-          break;
-        case 1:
           this.normal = false;
           this.unovs = true;
           this.normalClass = "";
           this.unovsClass = "is-active";
           break;
+        case 1:
+          this.unovs = false;
+          this.normal = true;
+          this.unovsClass = "";
+          this.normalClass = "is-active";
+          break;
+
       }
     }
   },
+
   filters: {
     conversion:function(value,valorvs,tasavs){
       try{
