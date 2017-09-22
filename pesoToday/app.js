@@ -49,7 +49,7 @@ var app = new Vue({
     axios.get("http://www.apilayer.net/api/live?access_key=0a722f2dcdd9b68c52dd508df4db2e73&format=1")
     .then(function (response) {
       that.tasas.peso = parseFloat(Math.round(response.data.quotes["USDCLP"] * 100) / 100).toFixed(2);
-      that.tasas.pesoCompra = parseFloat(Math.round((that.tasas.peso*1.02)* 100) / 100).toFixed(2);
+      that.tasas.pesoCompra = parseFloat(Math.round((that.tasas.peso*1.01)* 100) / 100).toFixed(2);
       that.valoresDolar.peso = that.tasas.peso;
       that.valoresDolar.pesoCompra = that.tasas.pesoCompra;
       valoresBase();
