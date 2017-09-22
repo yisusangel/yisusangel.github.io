@@ -1,6 +1,7 @@
 #cont {
-  margin: 50px auto;
-  max-width: 1000px;
+  margin: 20px auto;
+  padding:10px;
+  max-width: 800px;
 }
 
 [v-cloak] { display: none; }

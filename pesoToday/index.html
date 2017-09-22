@@ -16,41 +16,46 @@
       <div id="normal" v-cloak>
         <h3 class="title is-3">Valor del Dolar</h3>
 
-          <div class="columns is-mobile">
-            <div class="column is-2">
-              <span>Dolar</span>
-            </div>
-            <div class="column is-2">
-              <span>Peso</span>
-            </div>
-            <div class="column is-2">
-              <span>Peso de Compra (aprox)</span>
-            </div>
-            <div class="column is-2">
-              <span>Bolivar</span>
-            </div>
-            <div class="column is-2">
-              <span>Tasa Conversion Peso/Bs</span>
-            </div>
+        <div class="columns is-mobile">
+          <div class="column is-6">
+            <span>Dolar</span>
           </div>
-          <div class="columns is-mobile">
-            <div class="column is-2">
-              <input class="input" type="text" v-model="valoresDolar.dolar" :value="valoresDolar.dolar" @keyup="cambiarDolarDolar"/>
-            </div>
-            <div class="column is-2">
-              <input class="input" type="text" v-model="valoresDolar.peso" :value="valoresDolar.peso" @keyup="cambiarDolarPeso"/>
-            </div>
-            <div class="column is-2">
-              <input class="input" type="text" v-model="valoresDolar.pesoCompra" :value="valoresDolar.pesoCompra" @keyup="cambiarDolarPesoCompra"/>
-            </div>
-            <div class="column is-2">
-              <input class="input" type="text" v-model="valoresDolar.bolivar" :value="valoresDolar.bolivar" @keyup="cambiarDolarBolivar"/>
-            </div>
-            <div class="column is-2">
-              <span>{{tasasConversion.normal}}</span>
-            </div>
+          <div class="column is-6">
+            <input class="input" type="text" v-model="valoresDolar.dolar" :value="valoresDolar.dolar" @keyup="cambiarDolarDolar"/>
           </div>
-
+        </div>
+        <div class="columns is-mobile">
+          <div class="column is-6">
+            <span>Peso</span>
+          </div>
+          <div class="column is-6">
+            <input class="input" type="text" v-model="valoresDolar.peso" :value="valoresDolar.peso" @keyup="cambiarDolarPeso"/>
+          </div>
+        </div>
+        <div class="columns is-mobile">
+          <div class="column is-6">
+            <span>Peso de Compra (aprox)</span>
+          </div>
+          <div class="column is-6">
+            <input class="input" type="text" v-model="valoresDolar.pesoCompra" :value="valoresDolar.pesoCompra" @keyup="cambiarDolarPesoCompra"/>
+          </div>
+        </div>
+        <div class="columns is-mobile">
+          <div class="column is-6">
+            <span>Bolivar</span>
+          </div>
+          <div class="column is-6">
+            <input class="input" type="text" v-model="valoresDolar.bolivar" :value="valoresDolar.bolivar" @keyup="cambiarDolarBolivar"/>
+          </div>
+        </div>
+        <div class="columns is-mobile">
+          <div class="column is-6">
+            <span>Tasa Conversion Peso/Bs</span>
+          </div>
+          <div class="column is-6">
+            <span>{{tasasConversion.normal}}</span>
+          </div>
+        </div>
         <br/>
         <h3 class="title is-3">Conversor Peso/Bolivar</h3>
 
