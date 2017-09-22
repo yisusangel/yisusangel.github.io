@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peso Today</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <div id="cont">
+
+      <h1 class="title is-1">Peso Today</h1>
+
+
+      <div id="normal" v-cloak>
+        <h3 class="title is-3">Valor del Dolar</h3>
+
+          <div class="columns is-mobile">
+            <div class="column is-2">
+              <span>Dolar</span>
+            </div>
+            <div class="column is-2">
+              <span>Peso</span>
+            </div>
+            <div class="column is-2">
+              <span>Peso de Compra (aprox)</span>
+            </div>
+            <div class="column is-2">
+              <span>Bolivar</span>
+            </div>
+            <div class="column is-2">
+              <span>Tasa Conversion Peso/Bs</span>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-2">
+              <input class="input" type="text" v-model="valoresDolar.dolar" :value="valoresDolar.dolar" @keyup="cambiarDolarDolar"/>
+            </div>
+            <div class="column is-2">
+              <input class="input" type="text" v-model="valoresDolar.peso" :value="valoresDolar.peso" @keyup="cambiarDolarPeso"/>
+            </div>
+            <div class="column is-2">
+              <input class="input" type="text" v-model="valoresDolar.pesoCompra" :value="valoresDolar.pesoCompra" @keyup="cambiarDolarPesoCompra"/>
+            </div>
+            <div class="column is-2">
+              <input class="input" type="text" v-model="valoresDolar.bolivar" :value="valoresDolar.bolivar" @keyup="cambiarDolarBolivar"/>
+            </div>
+            <div class="column is-2">
+              <span>{{tasasConversion.normal}}</span>
+            </div>
+          </div>
+
+        <br/>
+        <h3 class="title is-3">Conversor Peso/Bolivar</h3>
+
+        <div class="columns is-mobile">
+          <div class="column is-4">
+            <span></span>
+          </div>
+          <div class="column is-4">
+            <span>Valores Recibiendo Pesos</span>
+          </div>
+          <div class="column is-4">
+            <span>Valores Recibiendo Bs</span>
+          </div>
+        </div>
+        <div class="columns is-mobile">
+          <div class="column is-2">
+            <span>Peso</span>
+          </div>
+          <div class="column is-5">
+            <input class="input" type="text" v-model="pesoConv.recPeso" :value="pesoConv.recPeso" @keyup="cambiarPesoRecPeso"/>
+          </div>
+          <div class="column is-5">
+            <input class="input" type="text" v-model="pesoConv.recBolivar" :value="pesoConv.recBolivar" @keyup="cambiarPesoRecBolivar"/>
+          </div>
+        </div>
+        <div class="columns is-mobile">
+          <div class="column is-2">
+            <span>Bolivar</span>
+          </div>
+          <div class="column is-5">
+            <input class="input" type="text" v-model="bolivarConv.recPeso" :value="bolivarConv.recPeso" @keyup="cambiarBolivarRecPeso"/>
+          </div>
+          <div class="column is-5">
+            <input class="input" type="text" v-model="bolivarConv.recBolivar" :value="bolivarConv.recBolivar" @keyup="cambiarBolivarRecBolivar"/>
+          </div>
+        </div>
+      </div>
+  </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
