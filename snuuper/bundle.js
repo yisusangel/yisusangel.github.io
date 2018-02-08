@@ -19595,7 +19595,6 @@ var Productos = function (_Component) {
           total: producto.price * cantidad
         });
       }
-      console.log(cart);
       this.setState({ cart: cart });
     }
   }, {
@@ -20619,11 +20618,12 @@ var Canasta = function (_Component) {
     key: 'finalizarPago',
     value: function finalizarPago() {
       var cart = this.state.cart;
-      _axios2.default.post('https://apitester.com/', {
+      /*axios.post(`http://www.somepage.com`,{
         compra: cart
-      }).then(function (response) {
-        console.log(JSON.stringify(cart));
-      });
+      })
+      .then((response) => {*/
+      console.log(JSON.stringify(cart));
+      //})
       alert(JSON.stringify(cart));
       this.setState({ cart: [] });
     }
