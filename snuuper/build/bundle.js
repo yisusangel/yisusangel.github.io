@@ -2143,19 +2143,14 @@ var App = function (_Component) {
           'nav',
           { className: 'navbar navbar-dark bg-dark' },
           _react2.default.createElement(
-            'span',
-            { className: 'navbar-brand' },
-            'SnuupStore'
-          ),
-          _react2.default.createElement(
             'ul',
             { className: 'navbar-nav' },
             _react2.default.createElement(
               'li',
-              { className: 'nav-item' },
+              { className: "nav-item " + (tipo == "electronics" ? "activo" : "") },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', onClick: function onClick() {
+                { className: "nav-link", onClick: function onClick() {
                     return _this2.setState({ tipo: "electronics" });
                   } },
                 'ARTICULOS ELECTR\xD3NICOS'
@@ -2163,10 +2158,10 @@ var App = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              { className: 'nav-item' },
+              { className: "nav-item " + (tipo == "movies" ? "activo" : "") },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', onClick: function onClick() {
+                { className: "nav-link", onClick: function onClick() {
                     return _this2.setState({ tipo: "movies" });
                   } },
                 'PELICULAS'
@@ -2174,10 +2169,10 @@ var App = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              { className: 'nav-item' },
+              { className: "nav-item " + (tipo == "videogames" ? "activo" : "") },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', onClick: function onClick() {
+                { className: "nav-link", onClick: function onClick() {
                     return _this2.setState({ tipo: "videogames" });
                   } },
                 'VIDEOJUEGOS'
@@ -2185,10 +2180,10 @@ var App = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              { className: 'nav-item' },
+              { className: "nav-item " + (tipo == "canasta" ? "activo" : "") },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', onClick: function onClick() {
+                { className: "nav-link", onClick: function onClick() {
                     return _this2.setState({ tipo: "canasta" });
                   } },
                 'IR A CANASTA'
@@ -19578,7 +19573,6 @@ var Productos = function (_Component) {
       var _this3 = this;
 
       _axios2.default.get('ajax/' + nextProps.tipo + '.json').then(function (response) {
-        console.log(response.data.items);
         _this3.setState({ productos: response.data.items, tipo: nextProps.tipo, cart: nextProps.cart });
       });
     }
@@ -19657,7 +19651,7 @@ var Productos = function (_Component) {
               producto.price,
               '$'
             ),
-            _react2.default.createElement('input', { min: '1', onChange: function onChange(cant) {
+            _react2.default.createElement('input', { placeholder: 'cantidad..', min: '1', onChange: function onChange(cant) {
                 return _this4.cambiarCantidad(cant.target.value, producto.id);
               }, type: 'number', className: 'form-control cantidades-productos' }),
             _react2.default.createElement(
@@ -20625,12 +20619,11 @@ var Canasta = function (_Component) {
     key: 'finalizarPago',
     value: function finalizarPago() {
       var cart = this.state.cart;
-      /*axios.post(`https://apitester.com/`,{
+      _axios2.default.post('https://apitester.com/', {
         compra: cart
-      })
-      .then((response) => {*/
-      console.log(JSON.stringify(cart));
-      //})
+      }).then(function (response) {
+        console.log(JSON.stringify(cart));
+      });
       alert(JSON.stringify(cart));
       this.setState({ cart: [] });
     }
@@ -20712,7 +20705,7 @@ var Canasta = function (_Component) {
                 _react2.default.createElement(
                   'td',
                   null,
-                  _react2.default.createElement('input', { min: '1', defaultValue: prod.cantidad, onChange: function onChange(cant) {
+                  _react2.default.createElement('input', { placeholder: 'cantidad..', min: '1', defaultValue: prod.cantidad, onChange: function onChange(cant) {
                       return _this2.cambiarCantidad(cant.target.value, prod.id);
                     }, type: 'number', className: 'form-control' })
                 ),
@@ -20817,7 +20810,7 @@ exports = module.exports = __webpack_require__(22)(false);
 
 
 // module
-exports.push([module.i, ".App__App___VCqpD {\n  text-align: center;\n}\n\n.App__App-logo___11TUd {\n  height: 50px;\n}\n\n.App__App-header___2mNrj {\n  background-color: #E9E9E9;\n  height: 100px;\n  padding: 20px;\n  color: white;\n}\n\n.App__App-title___1Bi7z {\n  color: #062436;\n}\n\n.App__App-intro___34RWd {\n  font-size: large;\n}\n\n.App__producto___3pGVM {\n  display: inline-block;\n  width:29%;\n  margin: 2%;\n}\n\nnav .App__navbar-nav___HAYtp{\n  display:inline-block;\n}\n\nnav .App__nav-item___1MHQ_{\n  display:inline-block;\n  padding: 5px 20px;\n}\n\nnav .App__nav-link___3KWbW{\n  cursor: pointer;\n}\n\n.App__cantidades-productos___2Yp_v{\n  background:red\n}\n\n.App__cantidades-productos___2Yp_v, .App__btn-productos___1hMyZ{\n  width: 49% !important;\n  margin: 0 auto;\n}\n\n.App__imagenes-productos___33JTU{\n  width:50%;\n}\n\n#App__tabla-productos___gpYX6{\n  margin: 0 auto;\n  border-collapse: collapse;\n\n}\n\n#App__tabla-productos___gpYX6 tr:nth-child(odd){\n  background: #eee;\n}\n\n#App__tabla-productos___gpYX6 td{\n  padding: 4px;\n}\n\n#App__btn-pagar___1et6K{\n  margin: 0 auto;\n  padding: 5px 40px;\n  text-transform: uppercase;\n\n}\n", ""]);
+exports.push([module.i, ".App__App___VCqpD {\n  text-align: center;\n}\n\n.App__App-logo___11TUd {\n  height: 50px;\n}\n\n.App__App-header___2mNrj {\n  background-color: #E9E9E9;\n  height: 100px;\n  padding: 20px;\n  color: white;\n}\n\n.App__App-title___1Bi7z {\n  color: #062436;\n}\n\n.App__App-intro___34RWd {\n  font-size: large;\n}\n\n.App__producto___3pGVM {\n  display: inline-block;\n  width:29%;\n  margin: 2%;\n}\n\nnav .App__navbar-nav___HAYtp{\n  display:inline-block;\n  margin: 0 auto;\n}\n\nnav .App__nav-item___1MHQ_{\n  display:inline-block;\n  padding: 5px 20px;\n}\n\nnav .App__nav-item___1MHQ_.App__activo___3irCU{\n  color:white;\n  background:rgba(255,255,255,0.1);\n  border-radius: 2px;\n}\n\nnav .App__nav-item___1MHQ_.App__activo___3irCU a{\n  color:white !important;\n}\n\nnav .App__nav-link___3KWbW{\n  cursor: pointer;\n}\n\n.App__cantidades-productos___2Yp_v{\n  background:red\n}\n\n.App__cantidades-productos___2Yp_v, .App__btn-productos___1hMyZ{\n  width: 49% !important;\n  margin: 0 auto;\n}\n\n.App__imagenes-productos___33JTU{\n  width:50%;\n}\n\n#App__tabla-productos___gpYX6{\n  margin: 0 auto;\n  border-collapse: collapse;\n\n}\n\n#App__tabla-productos___gpYX6 tr:nth-child(odd){\n  background: #eee;\n}\n\n#App__tabla-productos___gpYX6 td{\n  padding: 4px;\n}\n\n#App__btn-pagar___1et6K{\n  margin: 0 auto;\n  padding: 5px 40px;\n  text-transform: uppercase;\n\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -20829,6 +20822,7 @@ exports.locals = {
 	"producto": "App__producto___3pGVM",
 	"navbar-nav": "App__navbar-nav___HAYtp",
 	"nav-item": "App__nav-item___1MHQ_",
+	"activo": "App__activo___3irCU",
 	"nav-link": "App__nav-link___3KWbW",
 	"cantidades-productos": "App__cantidades-productos___2Yp_v",
 	"btn-productos": "App__btn-productos___1hMyZ",
