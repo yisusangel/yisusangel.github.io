@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "station": "videogames",
+    "items": [{
+            "id": 11,
+            "name": "Super Mario Bros 64",
+            "excerpt": "Super Mario Bros 64",
+            "price": 80,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/mario64.jpg"
+        }, {
+            "id": 12,
+            "name": "The Legend Of Zelda: Ocarina Of Time",
+            "excerpt": "The Legend Of Zelda: Ocarina Of Time",
+            "price": 80,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/zelda.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Megaman X",
+            "excerpt": "Megaman X",
+            "price": 80,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/megamanx.JPG"
+        }, {
+            "id": 14,
+            "name": "Borderlands",
+            "excerpt": "Borderlands",
+            "price": 80,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/borderlands.jpg"
+        },
+        {
+            "id": 15,
+            "name": "God Of War",
+            "excerpt": "God Of War",
+            "price": 80,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/godOfWar.jpg"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "station": "electronics",
+    "items": [{
+            "id": 1,
+            "name": "Android TV",
+            "excerpt": "Android TV Quad Core V.7.0",
+            "price": 150,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/android-tv-6.jpg"
+        }, {
+            "id": 2,
+            "name": "Speakers BT Genius",
+            "excerpt": "Speakers BT Genius 100 Watts",
+            "price": 200,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/geniusBT.JPG"
+        },
+        {
+            "id": 3,
+            "name": "Televisor AOC",
+            "excerpt": "Tv AOC 43 Inches, Smart TV",
+            "price": 300,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/AOC.jpg"
+        }, {
+            "id": 4,
+            "name": "Cafetera NESPRESSO",
+            "excerpt": "Cafetera NESPRESSO Inissia",
+            "price": 200,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/cafetera-nespresso.jpg"
+        },
+        {
+            "id": 5,
+            "name": "iPhone 6s 16 GB",
+            "excerpt": "iPhone 6s 16 GB Color Negro",
+            "price": 450,
+            "url": "https://snuuper.s3.amazonaws.com/snuuperTest/iphone.jpeg"
+        }
+    ]
+}
