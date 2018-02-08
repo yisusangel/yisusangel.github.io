@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 50px;
+}
+
+.App-header {
+  background-color: #E9E9E9;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  color: #062436;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.producto {
+  display: inline-block;
+  width:29%;
+  margin: 2%;
+}
+
+nav .navbar-nav{
+  display:inline-block;
+  margin: 0 auto;
+}
+
+nav .nav-item{
+  display:inline-block;
+  padding: 5px 20px;
+}
+
+nav .nav-item.activo{
+  color:white;
+  background:rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+nav .nav-item.activo a{
+  color:white !important;
+}
+
+nav .nav-link{
+  cursor: pointer;
+}
+
+.cantidades-productos{
+  background:red
+}
+
+.cantidades-productos, .btn-productos{
+  width: 49% !important;
+  margin: 0 auto;
+}
+
+.imagenes-productos{
+  width:50%;
+}
+
+#tabla-productos{
+  margin: 0 auto;
+  border-collapse: collapse;
+
+}
+
+#tabla-productos tr:nth-child(odd){
+  background: #eee;
+}
+
+#tabla-productos td{
+  padding: 4px;
+}
+
+#btn-pagar{
+  margin: 0 auto;
+  padding: 5px 40px;
+  text-transform: uppercase;
+
+}
