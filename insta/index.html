@@ -2,11 +2,19 @@
 <html manifest="">
 <head>
     <title>insta</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript">
-      console.log("prueba");
+        var data = {
+            'access_token':'7163653450.1677ed0.4faca6eded104563b9c3d679a838fd6f',
+            'text':'hola+solo+queria+comentar+que+estos+usuarios+acaban+debloquear+mi+cuenta+porque+tengo+desde+el+9+de+enero+esperando+que+me+den+el+numero+de+guia,+son+unos+estafadores'
+        }
+            
+        $.ajax({
+          type: "POST",
+          url: https://api.instagram.com/v1/media/BfbRBhfnfXc/comments,
+          data: data,
+        });
     </script>
 </head>
-<body>
-    <span>hola</span>
-      </body>
+<body></body>
 </html>
