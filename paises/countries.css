@@ -1,0 +1,175 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+body p {
+    margin: 0
+}
+
+header {
+    background-color: #004bb1;
+    height: 100px;
+}
+
+#headerCont {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+#logoCont {
+    display: inline-block;
+    width: 30%;
+}
+
+#searchBarCont {
+    width: 69%;
+    position: relative;
+    float: right;
+}
+
+#searchBar {
+    padding: 5px 10px;
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #555;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: 28px;
+}
+
+#autoComplete {
+    position: absolute;
+    max-width: 500px;
+    width: 100%;
+}
+
+#searchBar:focus {
+    outline: none;
+}
+
+
+.autoCompleteValue {
+    display: inline-block;
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid #555;
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: white;
+}
+
+.autoCompleteValue:not(:first-child) {
+    border-top: 0;
+}
+
+#selectedCountry {
+    padding: 2%;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.card {
+    border-radius: 2px;
+    background:#fdfdfd;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.1);
+    padding: 1%;
+}
+
+#flagCont {
+    display: inline-block;
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    
+}
+
+#countryNameCont {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+#countryName {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+#ogCountryName {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+#flag {
+    width: 100%;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.1);
+}
+
+#countryHeader {
+    margin: 1%
+}
+
+#bordersCont, #langCont {
+    margin: 1%;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.neighborValue {
+    cursor: pointer;
+    color: #004bb1;
+}
+
+.neighborValue:hover {
+    text-decoration: underline;
+}
+
+#loadingCont {
+    display: none;
+    background-color: 'red'
+}
+
+.isLoading {
+    display: none;
+}
+
+#loadingCont.isLoading {
+    display: inline;
+}
+
+@media (max-width: 800px) {
+    header {
+        height: 160px;
+    }
+    #logoCont, #searchBarCont {
+        width: 100%;
+        text-align: center;
+    }
+    #autoComplete {
+        width: 96%;
+        max-width: 96%;
+        text-align: center;
+
+    }
+    #searchBar {
+        max-width: 70%;
+        margin-top: 0px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #searchBar {
+        max-width: 90%;
+    }
+    #bordersCont, #langCont {
+        width: 96%;
+    }
+}

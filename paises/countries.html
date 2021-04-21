@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paises</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="countries.css">
+        <script src='countries.js'></script>
+    </head>
+
+    <body onLoad='loadContries()'>
+        <header>
+            <div id='headerCont'>
+                <div id='logoCont'>
+                    <img src='https://www.ecomsur.com/wp-content/uploads/2020/02/LOGO-ECOMSUR-2019-2-250x99.png'/>
+                </div>
+                <div id='loadingCont'>
+                    loading
+                </div>
+                <div id='searchBarCont'>
+                    <input id='searchBar' onKeyUp='searchCountry(this)'/>
+                    <div id='autoComplete'></div>
+                </div>
+            </div>
+        </header>
+
+        <section id='selectedCountry' style='display:none'>
+            <div id='countryHeader' class='card'>
+                <div id='flagCont'>
+                    <img id='flag'/>
+                </div>
+                <div id='countryNameCont'>
+                    <p id='countryName'></p>
+                    <p id='ogCountryName'></p>
+                    <p id='capital'></p>
+                    <p id='region'></p>
+                </div>
+                
+            </div>
+            <div id='bordersCont' class='card'>
+                <h3>Neighbor Countries</h3>
+                <p id='borders'></p>
+            </div>
+            <div id='langCont' class='card'>
+                <div class='infoCont'>
+                    <h3>Languages</h3>
+                    <p id='lang'></p>
+                </div>
+                <div class='infoCont'>
+                    <h3>Currencies</h3>
+                    <p id='currency'></p>
+                </div>
+            </div>
+            
+        </section>
+    </body>
+
+</html> 
