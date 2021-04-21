@@ -131,19 +131,6 @@ header {
     text-decoration: underline;
 }
 
-#loadingCont {
-    display: none;
-    background-color: 'red'
-}
-
-.isLoading {
-    display: none;
-}
-
-#loadingCont.isLoading {
-    display: inline;
-}
-
 @media (max-width: 800px) {
     header {
         height: 160px;

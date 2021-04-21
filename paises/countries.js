@@ -83,19 +83,14 @@ function getCurrencies(c) {
         curText = c.length-1 === i ? curText : curText+'<br/>';
     })
     document.getElementById('currency').innerHTML = curText;
-    
-
 }
 
-
-
 function setLoading(loading) {
-    var elems = document.querySelectorAll('#searchBar, #selectedCountry, #loadingCont');
-    elems.forEach(function(e) {
-        if(loading) {
-            e.classList.add('isLoading');
-        } else {
-            e.classList.remove('isLoading');
-        }
-    })
+    if(loading) {
+        document.getElementById('searchBar').value = 'Loading...';
+        document.getElementById('searchBar').disabled = true;
+    } else {
+        document.getElementById('searchBar').value = ''
+        document.getElementById('searchBar').disabled = false;
+    }
 }
