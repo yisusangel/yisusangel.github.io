@@ -32,6 +32,7 @@ function searchCountry(e) {
 
 function onClickCountry(country) {
     document.getElementById('selectedCountry').removeAttribute('style');
+    document.getElementById('worldmapCont').style.display = 'none';
     document.getElementById('autoComplete').innerHTML = '';
     document.getElementById('searchBar').value = '';
     document.getElementById('countryName').innerHTML = country.name;
